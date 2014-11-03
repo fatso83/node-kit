@@ -46,6 +46,10 @@ describe('Kit', function () {
         kit(__dirname + '/fixtures/page.kit').should.equal(read(__dirname + '/fixtures/results/page.html').toString());
     });
 
+    it('should have the same newline output as the CodeKit app', function() {
+        kit(__dirname + '/fixtures/newline-test.kit').should.equal(read(__dirname + '/fixtures/results/newline-test.html').toString());
+    });
+
     it('should throw an error for infinite loop', function () {
         var err;
         try {
