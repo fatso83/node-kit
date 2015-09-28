@@ -72,6 +72,10 @@ describe('Kit', function () {
         fixtureTest('undeclaredVariableUse');
     });
 
+    it('should be able to access variables set in parent files (#16)', function () {
+        fixtureTest('issue-16');
+    });
+
     it('should throw an error for infinite loop', function () {
         errorTest('importsLoop');
     });
